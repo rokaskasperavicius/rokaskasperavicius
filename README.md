@@ -4,6 +4,7 @@
   <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" />
 </h1>
 
+<!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rokaskasperavicius&hide=jupyter%20notebook&theme=buefy&hide_border=true&bg_color=00000000" /> -->
 
 <picture>
   <source
@@ -11,7 +12,7 @@
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=rokaskasperavicius&hide=jupyter%20notebook&theme=dark&hide_border=true"
+    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=rokaskasperavicius&hide=jupyter%20notebook&theme=default&layout=compact&hide_border=true&bg_color=00000000"
     media="(prefers-color-scheme: default)"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
