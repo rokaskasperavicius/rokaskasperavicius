@@ -1,4 +1,4 @@
-<h1 style="text-align: center">
+<h1 align="center">
   <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" />
   &nbsp;Welcome to My Profile!&nbsp;
   <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" />
