@@ -7,7 +7,7 @@
 
 <picture>
   <source
-    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=rokaskasperavicius&hide=jupyter%20notebook&theme=dark&hide_border=true"
+    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=rokaskasperavicius&hide=jupyter%20notebook&theme=dark&hide_border=true&bg_color=00000000"
     media="(prefers-color-scheme: dark)"
   />
   <source
