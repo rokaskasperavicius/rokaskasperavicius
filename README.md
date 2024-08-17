@@ -33,10 +33,10 @@ Hello, my name is Rokas! I am a 23-year-old student Frontend Developer currently
 <h3>My Education &nbsp;<img src="
 https://emojis.slackmojis.com/emojis/images/1643515023/10521/meow_code.gif?1643515023" width="25" /></h3>
 
-<table align="left">
+<table>
   <tr>
-    <th>University</th>
-    <th>Degree</th>
+    <th align="left">University</th>
+    <th align="left">Degree</th>
   </tr>
   <tr>
     <td><a target="_blank" href="https://en.itu.dk/"><img width="200" src="https://itu.dk/-/media/DK/Om-ITU/Presse/ITU-Logoer/ITU_logo_CPH_UK-jpg.jpg" /></a></td>
