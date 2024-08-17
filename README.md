@@ -30,7 +30,8 @@
 
 Hello, my name is Rokas! I am a 23-year-old student Frontend Developer currently living in Copenhagen, Denmark 🇩🇰
 
-<h3>My Education 📚</h3>
+<h3>My Education &nbsp;<img src="
+https://emojis.slackmojis.com/emojis/images/1643515023/10521/meow_code.gif?1643515023" width="25" /></h3>
 
 <table>
   <tr>
@@ -38,11 +39,11 @@ Hello, my name is Rokas! I am a 23-year-old student Frontend Developer currently
     <th>Degree</th>
   </tr>
   <tr>
-    <td><img width="200" src="https://itu.dk/-/media/DK/Om-ITU/Presse/ITU-Logoer/ITU_logo_CPH_UK-jpg.jpg" /></td>
+    <td><a target="_blank" href="https://en.itu.dk/"><img width="200" src="https://itu.dk/-/media/DK/Om-ITU/Presse/ITU-Logoer/ITU_logo_CPH_UK-jpg.jpg" /></a></td>
     <td>Master's in Computer Science</td>
   </tr>
   <tr>
-    <td><img width="200" src="https://ruc.dk/sites/default/files/2017-05/ruc_logo_download_en.png" /></td>
+    <td><a target="_blank" href="https://ruc.dk/en"><img width="200" src="https://ruc.dk/sites/default/files/2017-05/ruc_logo_download_en.png" /></a></td>
     <td>Bachelor's in Computer Science & Mathematics</td>
   </tr>
 </table>
