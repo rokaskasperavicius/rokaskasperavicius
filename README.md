@@ -33,7 +33,7 @@ Hello, my name is Rokas! I am a 23-year-old student Frontend Developer currently
 <h3>My Education &nbsp;<img src="
 https://emojis.slackmojis.com/emojis/images/1643515023/10521/meow_code.gif?1643515023" width="25" /></h3>
 
-<table>
+<table align="left">
   <tr>
     <th>University</th>
     <th>Degree</th>
