@@ -1,0 +1,31 @@
+query HomePage {
+  homePage {
+    id
+    heroImage {
+      responsiveImage(imgixParams: { fit: crop, w: 1920, auto: format }) {
+        ...ResponsiveImageFragment
+      }
+    }
+
+    aboutHeading
+    aboutDescription {
+      blocks
+      value
+      links
+    }
+    aboutImage {
+      responsiveImage(imgixParams: { fit: crop, w: 250, auto: format }) {
+        ...ResponsiveImageFragment
+      }
+    }
+    technologiesHeading
+    technologies {
+      ...TechnologiesRecordFragment
+    }
+
+    experiencesHeading
+    experiences {
+      ...ExperienceRecordFragment
+    }
+  }
+}

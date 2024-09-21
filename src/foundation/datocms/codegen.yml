@@ -1,0 +1,15 @@
+overwrite: true
+schema:
+  - https://graphql.datocms.com:
+      headers:
+        Authorization: ${NEXT_DATOCMS_API_TOKEN}
+        X-Exclude-Invalid: true
+documents: './**/*.graphql'
+config:
+  namingConvention: keep
+generates:
+  src/foundation/datocms/types/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node

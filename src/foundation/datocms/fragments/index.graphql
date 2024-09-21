@@ -1,0 +1,56 @@
+fragment ResponsiveImageFragment on ResponsiveImage {
+  srcSet
+  webpSrcSet
+  sizes
+  src
+  width
+  height
+  aspectRatio
+  alt
+  title
+  base64
+}
+
+fragment TechnologiesRecordFragment on TechnologyRecord {
+  _createdAt
+  _isValid
+  _modelApiKey
+  _status
+  _updatedAt
+  createdAt
+  id
+  title
+  updatedAt
+  _seoMetaTags {
+    attributes
+    content
+    tag
+  }
+}
+
+fragment ExperienceRecordFragment on ExperienceRecord {
+  _createdAt
+  _isValid
+  _modelApiKey
+  _status
+  _updatedAt
+  createdAt
+  date
+  id
+  updatedAt
+  description {
+    blocks
+    value
+    links
+  }
+  title {
+    blocks
+    value
+    links
+  }
+  _seoMetaTags {
+    attributes
+    content
+    tag
+  }
+}
