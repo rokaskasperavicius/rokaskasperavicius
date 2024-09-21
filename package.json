@@ -13,6 +13,7 @@
     "codegen": "graphql-codegen -r dotenv/config --config ./src/foundation/datocms/codegen.yml"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.0.12",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.12",
     "graphql": "^16.8.1",

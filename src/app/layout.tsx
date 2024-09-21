@@ -1,4 +1,5 @@
 import { AppLayout } from '@/components/layout/app-layout'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 
 import '../foundation/styles/globals.css'
@@ -16,6 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <SpeedInsights />
+
       <body>
         <AppLayout>{children}</AppLayout>
       </body>
