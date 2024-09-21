@@ -27,7 +27,7 @@ export const Intro = ({ heroImage }: IntroProps) => (
             <div className='word2 absolute left-0 top-0'>experienced</div>
             <div className='word3 absolute left-0 top-0'>confident</div>
             <div className='word4 absolute left-0 top-0'>consistent</div>
-            <div className='word5 absolute left-0 top-0 flex-nowrap'>
+            <div className='word5 absolute left-0 top-0 whitespace-nowrap'>
               open-minded
             </div>
           </div>
