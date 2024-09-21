@@ -32,7 +32,7 @@ const Item = ({ href, title, isActive }: Props) => (
   <Link
     href={href}
     className={clsx(
-      'hover:bg-accent cursor-pointer rounded-sm py-2 text-xl transition-colors [text-orientation:upright] [writing-mode:vertical-lr] hover:text-black lg:text-2xl',
+      'cursor-pointer rounded-sm py-2 text-xl transition-colors [text-orientation:upright] [writing-mode:vertical-lr] hover:bg-accent hover:text-black lg:text-2xl',
       {
         'bg-accent text-black': isActive,
       },

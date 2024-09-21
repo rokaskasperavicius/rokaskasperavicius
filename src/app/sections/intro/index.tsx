@@ -45,7 +45,7 @@ export const Intro = ({ heroImage }: IntroProps) => (
       <motion.section whileHover='hover' className='group'>
         <h3 className='text-xl md:text-2xl'>Featured Project 🚀</h3>
 
-        <div className='border-accent flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid p-4 sm:flex-row'>
+        <div className='flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid border-accent p-4 sm:flex-row'>
           <div className='overflow-hidden sm:max-w-xs'>
             <motion.div
               variants={{
