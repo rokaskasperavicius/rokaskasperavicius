@@ -61,9 +61,9 @@ export const AboutContent = ({
             </Swiper>
           </div>
 
-          <p className='mt-2 font-pangolin sm:text-lg'>
+          {/* <p className='mt-2 font-pangolin sm:text-lg'>
             Try dragging me - there is more!
-          </p>
+          </p> */}
         </div>
       </div>
 
