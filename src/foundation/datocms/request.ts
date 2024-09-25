@@ -5,9 +5,12 @@ import {
   request as graphqlRequest,
 } from 'graphql-request'
 
-export function request<TDocument = any>(
-  document: RequestDocument | TypedDocumentNode<TDocument, Variables>,
-  variables?: Variables,
+export function request<
+  TDocument = any,
+  TVariables extends Variables = Variables,
+>(
+  document: RequestDocument | TypedDocumentNode<TDocument, TVariables>,
+  variables?: TVariables,
 ) {
   return graphqlRequest<TDocument, Variables>(
     'https://graphql.datocms.com/',

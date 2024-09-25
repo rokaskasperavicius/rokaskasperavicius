@@ -5,12 +5,8 @@ import clsx from 'clsx'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-import Github from '@/foundation/assets/github.png'
-import GithubIcon from '@/foundation/assets/icons/github.svg'
-import LinkedInIcon from '@/foundation/assets/icons/linkedin.svg'
-import Linkedin from '@/foundation/assets/linkedin.png'
-
-import { Icon } from '../Icon'
+import { HeaderMenu } from '../shared/header-menu'
+import { Navigation } from './navigation'
 
 const timeFormatter = new Intl.DateTimeFormat('en-GB', {
   timeZone: 'Europe/Copenhagen',
@@ -31,7 +27,8 @@ const getTime = () => {
 }
 
 export const Header = () => {
-  const [show, setShow] = useState<boolean>(false)
+  const [openNavigation, setOpenNavigation] = useState(false)
+  const [showSvg, setShowSvg] = useState<boolean>(false)
 
   const [hour, setHour] = useState<string>(getTime().hour)
   const [minute, setMinute] = useState<string>(getTime().minute)
@@ -45,7 +42,7 @@ export const Header = () => {
     }, 1000)
 
     setTimeout(() => {
-      setShow(true)
+      setShowSvg(true)
     }, 2000)
 
     return () => {
@@ -54,20 +51,24 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className='hero-border flex w-full items-end justify-between px-2 md:text-xl'>
-      <p suppressHydrationWarning>
+    <header className='hero-border flex w-full items-end justify-between pr-2 md:text-xl'>
+      <HeaderMenu onClick={() => setOpenNavigation(true)} />
+
+      <Navigation open={openNavigation} setOpen={setOpenNavigation} />
+
+      <p suppressHydrationWarning className='text-center md:pl-2'>
         {hour}
         <span className='animate-full-pulse'>:</span>
         {minute} {timezone}, Denmark
       </p>
 
       <div className='flex'>
-        <div className='relative hidden sm:block'>
+        <div className='relative hidden md:block'>
           <div
             className={clsx(
               'absolute -left-24 top-0 font-pangolin transition-opacity',
               {
-                'opacity-0': !show,
+                'opacity-0': !showSvg,
               },
             )}
           >
@@ -78,20 +79,20 @@ export const Header = () => {
             <svg
               strokeLinecap='round'
               strokeLinejoin='round'
-              fill='#937666'
+              fill='#DED4CF'
               viewBox='0 0 550 300'
             >
               <path
                 id='line'
                 fill='none'
-                stroke='#937666'
+                stroke='#DED4CF'
                 strokeWidth='10'
                 d='M 18.9 128.6 c 62 33 186 99 311.3 28.5 c 37.3 -21 77.3 -108 -81.2 -92.3 c -175.5 17.3 -6 116.6 50 137.2 c 16.7 4.4 65 23 176 18'
               />
 
               <path
                 id='arrow'
-                stroke='#937666'
+                stroke='#DED4CF'
                 strokeWidth='12'
                 d='M 0 -20 l 39 21 l -43 15 l 4 -36 z'
               />
@@ -120,10 +121,6 @@ export const Header = () => {
           >
             GitHub
           </motion.a>
-          {/* <Icon src={LinkedInIcon} href={LINKEDIN_URL} />
-           */}
-          {/* <Icon src={GithubIcon} href={GITHUB_URL} />
-           */}
         </div>
       </div>
     </header>

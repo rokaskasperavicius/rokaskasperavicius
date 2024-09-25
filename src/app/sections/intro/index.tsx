@@ -7,19 +7,17 @@ import Link from 'next/link'
 import { ResponsiveImage } from '@/foundation/datocms/types'
 
 type IntroProps = {
-  heroImage: ResponsiveImage | null | undefined
+  featuredProjectImage: ResponsiveImage | null | undefined
 }
 
-export const Intro = ({ heroImage }: IntroProps) => (
-  <div className='flex h-[calc(100vh-2.5rem-61px)] w-full flex-col justify-between p-4 py-10 md:p-10 lg:h-[calc(100vh-10rem-61px)]'>
-    <h1 className='space-y-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
-      <div className='space-y-8'>
+export const Intro = ({ featuredProjectImage }: IntroProps) => (
+  <div className='flex min-h-[calc(100vh-2.5rem-61px)] w-full flex-col justify-between gap-20 p-4 py-10 md:p-10 2xl:min-h-[calc(100vh-10rem-61px)]'>
+    <h1 className='space-y-1 text-2xl sm:space-y-2.5 sm:text-3xl md:text-4xl lg:text-5xl'>
+      <div className='space-y-4 sm:space-y-8'>
         <div>Hi there! 👋</div>
 
-        <div className='flex flex-col gap-[10px] sm:flex-row'>
-          <div>
-            My name is Rokas <span className='hidden sm:inline'> - </span>
-          </div>
+        <div className='flex flex-col gap-1 sm:flex-row sm:gap-2.5'>
+          <div>My name is Rokas,</div>
 
           <div className='relative h-8'>
             <div className='word absolute left-0 top-0'>motivated</div>
@@ -52,7 +50,7 @@ export const Intro = ({ heroImage }: IntroProps) => (
                 hover: { scale: 1.1 },
               }}
             >
-              <DatoImage data={heroImage} />
+              <DatoImage data={featuredProjectImage} />
             </motion.div>
           </div>
 

@@ -15,8 +15,8 @@ export const OutroContent = () => {
                 Check my recent <span className='text-primary'>projects</span>{' '}
                 💻
               </p>
-              <div className='flex gap-3'>
-                <Link href='/projects' passHref>
+              <div className='flex gap-3 sm:mt-3'>
+                <Link href='/projects' className='underline' passHref>
                   {/* <motion.a
                     onHoverStart={() => leftP.start({ x: 5 })}
                     onHoverEnd={() => leftP.start({ x: 0 })}
@@ -42,8 +42,12 @@ export const OutroContent = () => {
                 <span className='text-primary'>projects</span>. Let&#39;s talk
                 💬
               </p>
-              <div className='flex gap-3'>
-                <Link href='/email' passHref>
+              <div className='flex gap-3 sm:mt-3'>
+                <Link
+                  href='mailto:kasperavicius.rokas@gmail.com'
+                  className='underline'
+                  passHref
+                >
                   {/* <motion.a
                   href='mailto:hello@rokaskasperavicius.dev'
                   target='_blank'

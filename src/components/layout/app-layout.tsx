@@ -1,5 +1,4 @@
 import { Header } from './header'
-import { Navigation } from './navigation'
 
 type AppLayoutProps = {
   children: React.ReactNode
@@ -7,10 +6,8 @@ type AppLayoutProps = {
 
 export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
-    <div className='m-auto mb-20 mt-10 max-w-screen-2xl lg:mt-40'>
-      <Navigation />
-
-      <div className='md:ml-14 lg:ml-[60px]'>
+    <div className='m-auto mb-20 mt-10 max-w-screen-2xl 2xl:mt-40'>
+      <div className='md:ml-16'>
         <Header />
 
         <main>{children}</main>

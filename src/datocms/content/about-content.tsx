@@ -48,7 +48,7 @@ export const AboutContent = ({
           <div className='grid'>
             <Swiper
               className='w-full'
-              grabCursor={true}
+              cssMode={true}
               slidesPerView={'auto'}
               slideToClickedSlide={true}
               spaceBetween={10}

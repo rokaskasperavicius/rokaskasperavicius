@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeInn {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 64px;
+  }
+}
+
+@keyframes fadeOutt {
+  from {
+    width: 64px;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+.DialogContent[data-state='open'] {
+  animation: fadeInn 300ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+.DialogContent[data-state='closed'] {
+  animation: fadeOutt 300ms ease-in;
+  animation-fill-mode: forwards;
+}
+
 .structured-text-wrapper {
   & a {
     text-decoration: underline;

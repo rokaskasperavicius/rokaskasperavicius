@@ -54,3 +54,24 @@ fragment ExperienceRecordFragment on ExperienceRecord {
     tag
   }
 }
+
+fragment ProjectRecordFragment on ProjectRecord {
+  slug
+  title
+  description
+  githubUrl
+  cover {
+    responsiveImage(
+      imgixParams: { fit: crop, w: 2560, h: 1440, auto: format }
+    ) {
+      ...ResponsiveImageFragment
+    }
+  }
+  images {
+    responsiveImage(
+      imgixParams: { fit: crop, w: 2560, h: 1440, auto: format }
+    ) {
+      ...ResponsiveImageFragment
+    }
+  }
+}
