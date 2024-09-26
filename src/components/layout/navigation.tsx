@@ -46,7 +46,7 @@ export const Navigation = ({ open, setOpen }: Props) => {
               <Item
                 onClick={() => setOpen(false)}
                 href='/projects'
-                isActive={pathname === '/projects'}
+                isActive={pathname.includes('/projects')}
                 title='Projects'
               />
             </Dialog.Description>
