@@ -3,10 +3,8 @@
 import { DatoImage } from '@/components'
 import { Technology } from '@/components/Technology'
 import { AnimatePresence } from '@/components/shared/animate-presence'
-import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import 'swiper/css'
-import { Autoplay, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import {
@@ -51,7 +49,7 @@ export const AboutContent = ({
               cssMode={true}
               slidesPerView={'auto'}
               slideToClickedSlide={true}
-              spaceBetween={10}
+              spaceBetween={5}
             >
               {technologies.map(({ id, title }) => (
                 <SwiperSlide className='!w-auto' key={id}>

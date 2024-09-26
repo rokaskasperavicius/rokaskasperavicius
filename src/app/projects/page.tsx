@@ -1,7 +1,7 @@
-import { Projects } from '@/datocms/content/project-content'
-
 import { request } from '@/foundation/datocms'
 import { ProjectsDocument } from '@/foundation/datocms/types'
+
+import { Projects } from './_content/projects'
 
 export default async function Page() {
   const projects = await request(ProjectsDocument)
@@ -12,7 +12,7 @@ export default async function Page() {
         Check Out My Projects
       </h1>
 
-      <div className='grid space-y-4'>
+      <div className='grid'>
         <Projects projects={projects} />
       </div>
     </div>
