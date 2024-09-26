@@ -30,16 +30,23 @@ export const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false)
   const [showSvg, setShowSvg] = useState<boolean>(false)
 
-  const [hour, setHour] = useState<string>(getTime().hour)
-  const [minute, setMinute] = useState<string>(getTime().minute)
-  const [timezone, setTimezone] = useState<string>(getTime().timezone)
+  const [hour, setHour] = useState<string>()
+  const [minute, setMinute] = useState<string>()
+  const [timezone, setTimezone] = useState<string>()
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const updateTime = () => {
       setHour(getTime().hour)
       setMinute(getTime().minute)
       setTimezone(getTime().timezone)
-    }, 1000)
+    }
+
+    // Hydrate initial state with the current time
+    updateTime()
+
+    const interval = setInterval(() => {
+      updateTime()
+    }, 500)
 
     setTimeout(() => {
       setShowSvg(true)
@@ -57,9 +64,13 @@ export const Header = () => {
       <Navigation open={openNavigation} setOpen={setOpenNavigation} />
 
       <p suppressHydrationWarning className='text-center md:pl-2'>
-        {hour}
-        <span className='animate-full-pulse'>:</span>
-        {minute} {timezone}, Denmark
+        {hour && minute && timezone && (
+          <>
+            {hour}
+            <span className='animate-full-pulse'>:</span>
+            {minute} {timezone}, Denmark
+          </>
+        )}
       </p>
 
       <div className='flex'>

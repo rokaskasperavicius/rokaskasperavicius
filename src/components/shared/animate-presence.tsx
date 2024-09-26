@@ -42,7 +42,9 @@ export const AnimatePresence = ({
   return (
     <motion.div
       ref={ref}
-      initial='hidden'
+      // If initial is set to 'hidden', the NextJS will render the component invisible on the server
+      // We let the useEffect hide it on the client
+      initial='visible'
       animate={control}
       variants={{
         visible: {
