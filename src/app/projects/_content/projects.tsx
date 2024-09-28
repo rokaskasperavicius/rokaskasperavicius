@@ -4,7 +4,6 @@ import { DatoImage } from '@/components/DatoImage'
 import { Technology } from '@/components/Technology'
 import { Carousel } from '@/components/shared/carousel'
 import Link from 'next/link'
-import 'swiper/css'
 
 import { ProjectsQuery } from '@/foundation/datocms/types'
 

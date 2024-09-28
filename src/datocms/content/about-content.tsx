@@ -5,7 +5,6 @@ import { Technology } from '@/components/Technology'
 import { AnimatePresence } from '@/components/shared/animate-presence'
 import { Carousel } from '@/components/shared/carousel'
 import 'react-multi-carousel/lib/styles.css'
-import 'swiper/css'
 
 import {
   HomePageRecord,
