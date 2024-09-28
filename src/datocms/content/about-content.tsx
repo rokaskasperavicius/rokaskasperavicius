@@ -3,9 +3,9 @@
 import { DatoImage } from '@/components'
 import { Technology } from '@/components/Technology'
 import { AnimatePresence } from '@/components/shared/animate-presence'
+import { Carousel } from '@/components/shared/carousel'
 import 'react-multi-carousel/lib/styles.css'
 import 'swiper/css'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 import {
   HomePageRecord,
@@ -37,31 +37,19 @@ export const AboutContent = ({
     <h2 className='flex justify-center gap-1 text-xl sm:text-3xl'>{heading}</h2>
 
     <div className='flex flex-col justify-between gap-4 md:flex-row'>
-      <div className='flex flex-col justify-around gap-4 sm:text-xl'>
+      <div className='flex flex-col justify-around gap-4 overflow-hidden sm:text-xl'>
         <StructuredText className='space-y-4 leading-8' content={description} />
 
         <div>
           <h5 className='my-2 sm:text-xl'>{technologiesHeading}</h5>
 
-          <div className='grid'>
-            <Swiper
-              className='w-full'
-              cssMode={true}
-              slidesPerView={'auto'}
-              slideToClickedSlide={true}
-              spaceBetween={5}
-            >
-              {technologies.map(({ id, title }) => (
-                <SwiperSlide className='!w-auto' key={id}>
-                  <Technology text={title} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* <p className='mt-2 font-pangolin sm:text-lg'>
-            Try dragging me - there is more!
-          </p> */}
+          <Carousel loop={false}>
+            {technologies.map(({ id, title }) => (
+              <Carousel.Slide autoWidth={true} key={id}>
+                <Technology text={title} />
+              </Carousel.Slide>
+            ))}
+          </Carousel>
         </div>
       </div>
 

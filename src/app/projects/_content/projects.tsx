@@ -2,10 +2,9 @@
 
 import { DatoImage } from '@/components/DatoImage'
 import { Technology } from '@/components/Technology'
-import { motion } from 'framer-motion'
+import { Carousel } from '@/components/shared/carousel'
 import Link from 'next/link'
 import 'swiper/css'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { ProjectsQuery } from '@/foundation/datocms/types'
 
@@ -14,15 +13,9 @@ type Props = {
 }
 
 export const Projects = ({ projects }: Props) => (
-  <Swiper
-    className='w-full'
-    cssMode={true}
-    slidesPerView={'auto'}
-    slideToClickedSlide={true}
-    spaceBetween={10}
-  >
+  <Carousel loop={true}>
     {projects.allProjects.map((project) => (
-      <SwiperSlide key={project.slug}>
+      <Carousel.Slide autoWidth key={project.slug}>
         <Link href={`/projects/${project.slug}`} className='group'>
           <div className='flex flex-col gap-4 rounded-md border-2 border-solid border-accent p-4 sm:flex-row'>
             <div className='flex-shrink-0 sm:w-2/3'>
@@ -46,7 +39,7 @@ export const Projects = ({ projects }: Props) => (
             </div>
           </div>
         </Link>
-      </SwiperSlide>
+      </Carousel.Slide>
     ))}
-  </Swiper>
+  </Carousel>
 )
