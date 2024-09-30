@@ -12,7 +12,13 @@ type Props = {
 }
 
 export const Projects = ({ projects }: Props) => (
-  <Carousel loop={true}>
+  <Carousel
+    thumbnails={projects.allProjects.map(
+      (project) => project.cover.responsiveImage,
+    )}
+    showNavigation
+    loop
+  >
     {projects.allProjects.map((project) => (
       <Carousel.Slide autoWidth key={project.slug}>
         <Link href={`/projects/${project.slug}`} className='group'>

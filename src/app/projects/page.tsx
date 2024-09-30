@@ -12,9 +12,7 @@ export default async function Page() {
         Check Out My Projects
       </h1>
 
-      <div className='grid'>
-        <Projects projects={projects} />
-      </div>
+      <Projects projects={projects} />
     </div>
   )
 }

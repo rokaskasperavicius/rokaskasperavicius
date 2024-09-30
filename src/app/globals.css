@@ -2,6 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+.left-arrow {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius: 6px;
+  border: 2px solid theme(colors.accent);
+  cursor: pointer;
+}
+
+.left-arrow:hover {
+  background-color: theme(colors.accent);
+}
+
+.left-arrow::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 5px;
+
+  border-right: 2px solid theme(colors.primary);
+  border-top: 2px solid theme(colors.primary);
+}
+
+.right-arrow {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius: 6px;
+  border: 2px solid theme(colors.accent);
+  cursor: pointer;
+}
+
+.right-arrow:hover {
+  background-color: theme(colors.accent);
+}
+
+.right-arrow::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 5px;
+
+  border-right: 2px solid theme(colors.primary);
+  border-top: 2px solid theme(colors.primary);
+}
+
 @keyframes fadeInn {
   from {
     width: 0px;
