@@ -13,7 +13,7 @@ export default async function Home() {
   if (!pageData.homePage) return null
 
   const {
-    featuredProject: { cover, slug },
+    featuredProject,
     aboutHeading,
     aboutDescription,
     aboutImage,
@@ -26,10 +26,7 @@ export default async function Home() {
   return (
     <div className='space-y-10 md:space-y-20'>
       {/* intro-section */}
-      <Intro
-        featuredProjectImage={cover.responsiveImage}
-        featuredProjectSlug={slug}
-      />
+      <Intro featuredProject={featuredProject} />
 
       {/* about-me section */}
       <AboutContent

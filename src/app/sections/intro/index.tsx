@@ -4,18 +4,14 @@ import { DatoImage } from '@/components'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import { ResponsiveImage } from '@/foundation/datocms/types'
+import { ProjectRecord, ResponsiveImage } from '@/foundation/datocms/types'
 
 type IntroProps = {
-  featuredProjectImage: ResponsiveImage | null | undefined
-  featuredProjectSlug: string
+  featuredProject: ProjectRecord
 }
 
-export const Intro = ({
-  featuredProjectImage,
-  featuredProjectSlug,
-}: IntroProps) => (
-  <div className='flex min-h-[calc(100vh-2.5rem-61px)] w-full flex-col justify-between gap-20 p-4 py-10 md:p-10 2xl:min-h-[calc(100vh-10rem-61px)]'>
+export const Intro = ({ featuredProject }: IntroProps) => (
+  <div className='flex min-h-[calc(100vh-2.5rem-61px)] w-full flex-col justify-between gap-52 p-4 py-10 md:p-10 2xl:min-h-[calc(100vh-10rem-61px)]'>
     <h1 className='space-y-1 text-2xl sm:space-y-2.5 sm:text-3xl md:text-4xl lg:text-5xl'>
       <div className='space-y-4 sm:space-y-8'>
         <div>Hi there! 👋</div>
@@ -44,29 +40,16 @@ export const Intro = ({
 
     <div className='flex justify-end'>
       {/* Featured */}
-      <motion.section whileHover='hover' className='group'>
-        <Link href={`/projects/${featuredProjectSlug}`}>
+      <motion.section whileHover='hover' className='group sm:max-w-96'>
+        <Link href={`/projects/${featuredProject.slug}`}>
           <h3 className='text-xl md:text-2xl'>Featured Project 🚀</h3>
 
-          <div className='flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid border-accent p-4 sm:flex-row'>
-            <div className='overflow-hidden sm:max-w-xs'>
-              <motion.div
-                variants={{
-                  hover: { scale: 1.1 },
-                }}
-              >
-                <DatoImage data={featuredProjectImage} />
-              </motion.div>
-            </div>
+          <div className='flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid border-accent p-4'>
+            <DatoImage data={featuredProject.cover.responsiveImage} />
 
-            <div className='flex flex-col justify-between'>
+            <div className='flex flex-col justify-between gap-4'>
               <div className='space-y-2'>
-                <div className='text-base text-gray-400 md:text-lg'>
-                  React - TypeScript - Express - PostgreSQL
-                </div>
-                <h4 className='text-lg md:text-xl'>
-                  Finance Management Application
-                </h4>
+                <h4 className='text-lg md:text-xl'>{featuredProject.title}</h4>
               </div>
 
               <div className='text-right text-lg group-hover:underline md:text-xl'>
