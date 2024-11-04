@@ -12,6 +12,9 @@
     "prebuild": "npm run codegen",
     "codegen": "graphql-codegen -r dotenv/config --config ./src/foundation/datocms/codegen.yml"
   },
+  "engines": {
+    "node": "20.11.1"
+  },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
     "@vercel/speed-insights": "^1.0.12",
