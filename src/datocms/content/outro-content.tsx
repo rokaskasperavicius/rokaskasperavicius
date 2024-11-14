@@ -44,7 +44,7 @@ export const OutroContent = () => {
               </p>
               <div className='flex gap-3 sm:mt-3'>
                 <Link
-                  href='mailto:kasperavicius.rokas@gmail.com'
+                  href='mailto:hello@rokaskasperavicius.dev'
                   className='underline'
                   passHref
                 >
