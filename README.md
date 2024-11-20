@@ -30,7 +30,7 @@
 
 <br />
 
-Hello, my name is Rokas! I am a 23-year-old student Frontend Developer currently living in Copenhagen, Denmark 🇩🇰
+Hello, my name is Rokas! I am a 23-year-old student Software Engineer currently living in Copenhagen, Denmark 🇩🇰
 
 <h3>My Education &nbsp;<img src="https://emojis.slackmojis.com/emojis/images/1643515023/10521/meow_code.gif?1643515023" width="25" /></h3>
 
