@@ -390,3 +390,20 @@
     }
   }
 }
+
+.hand-emoji:hover {
+  transform-origin: 70% 70%;
+  display: inline-block;
+  animation: wave-animation infinite 1s ease-in-out;
+}
+
+/* Define the waving keyframes */
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  } /* Start and end at 0deg */
+  50% {
+    transform: rotate(25deg);
+  } /* Rotate at the mid-point */
+}

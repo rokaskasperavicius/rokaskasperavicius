@@ -14,7 +14,9 @@ export const Intro = ({ featuredProject }: IntroProps) => (
   <div className='flex min-h-[calc(100vh-2.5rem-61px)] w-full flex-col justify-between gap-52 p-4 py-10 md:p-10 2xl:min-h-[calc(100vh-10rem-61px)]'>
     <h1 className='space-y-1 text-2xl sm:space-y-2.5 sm:text-3xl md:text-4xl lg:text-5xl'>
       <div className='space-y-4 sm:space-y-8'>
-        <div>Hi there! 👋</div>
+        <div>
+          Hi there! <span className='hand-emoji'>👋</span>
+        </div>
 
         <div className='flex flex-col gap-1 sm:flex-row sm:gap-2.5'>
           <div>My name is Rokas,</div>
