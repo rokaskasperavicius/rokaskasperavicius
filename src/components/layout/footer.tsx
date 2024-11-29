@@ -14,9 +14,9 @@ export const Footer = async () => {
 
   return (
     <footer className='mt-10 flex flex-row justify-between border-t-2 border-solid border-accent p-4 md:p-6 md:text-xl'>
-      <div>Rokas Kasperavicius, v1</div>
+      <div>Rokas Kasperavicius</div>
 
-      {date && <div>Last updated at: {date}</div>}
+      {date && <div>Last updated: {date}</div>}
     </footer>
   )
 }
