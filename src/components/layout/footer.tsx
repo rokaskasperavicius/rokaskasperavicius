@@ -8,10 +8,9 @@ export const Footer = () => {
   useEffect(() => {
     const handle = async () => {
       try {
-        const data = await fetch(
-          'https://webhooks.rokaskasperavicius.dev/api/meta',
-          { next: { revalidate: 0 } },
-        )
+        const data = await fetch('https://webhooks.cloudpeak.dev/api/meta', {
+          next: { revalidate: 0 },
+        })
         const result = await data.json()
 
         setDate(
