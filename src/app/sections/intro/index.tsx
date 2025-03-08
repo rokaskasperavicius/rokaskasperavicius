@@ -36,7 +36,7 @@ export const Intro = ({ featuredProject }: IntroProps) => (
 
       <div className='text-primary'>software developer</div>
       <div>
-        with <span className='text-primary'>4+ years </span> of work experience.
+        with <span className='text-primary'>5+ years </span> of work experience.
       </div>
     </h1>
 
