@@ -1,7 +1,7 @@
 <h1 align="center">
-  <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" />
+  <!-- <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" /> -->
   &nbsp;Welcome to My Profile!&nbsp;
-  <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" />
+  <!-- <img src="https://emojis.slackmojis.com/emojis/images/1660853767/60881/meow_attention.gif?1660853767" width="25" /> -->
 </h1>
 
 <!-- https://home.aveek.io/GitHub-Profile-Badges/ -->
@@ -24,15 +24,14 @@
   <a href="https://redux.js.org/"><img src="https://img.shields.io/badge/Redux-764ABC.svg?style=for-the-badge&logo=Redux&logoColor=white" /></a>
   <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white" /></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/Go-00ADD8.svg?style=for-the-badge&logo=Go&logoColor=white" /></a>
-  <a href="https://www.scala-lang.org/"><img src="https://img.shields.io/badge/Scala-DC322F.svg?style=for-the-badge&logo=Scala&logoColor=white" /></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white" /></a>
 </p>
 
 <br />
 
-Hello, my name is Rokas! I am a 23-year-old student Software Engineer currently living in Copenhagen, Denmark 🇩🇰
+Hello, my name is Rokas! I am a 24-year-old Software Engineer currently living in Copenhagen, Denmark 🇩🇰
 
-<h3>My Education &nbsp;<img src="https://emojis.slackmojis.com/emojis/images/1643515023/10521/meow_code.gif?1643515023" width="25" /></h3>
+<!-- <h3>My Education &nbsp;<img src="https://emojis.slackmojis.com/emojis/images/1643515023/10521/meow_code.gif?1643515023" width="25" /></h3>
 
 <table>
   <tr>
@@ -47,7 +46,7 @@ Hello, my name is Rokas! I am a 23-year-old student Software Engineer currently 
     <td><a target="_blank" href="https://ruc.dk/en"><img width="200" src="https://ruc.dk/sites/default/files/2017-05/ruc_logo_download_en.png" /></a></td>
     <td>Bachelor's in Computer Science & Mathematics</td>
   </tr>
-</table>
+</table> -->
 
 <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rokaskasperavicius&hide=jupyter%20notebook&layout=compact&theme=dark&hide_border=true" /> -->
 
