@@ -67,11 +67,13 @@ fragment ExperienceRecordFragment on ExperienceRecord {
   updatedAt
   description {
     blocks
+    inlineBlocks
     value
     links
   }
   title {
     blocks
+    inlineBlocks
     value
     links
   }
@@ -95,6 +97,7 @@ fragment ProjectRecordFragment on ProjectRecord {
   title
   description {
     blocks
+    inlineBlocks
     value
     links
   }
