@@ -27,7 +27,7 @@ export const Projects = ({ projects }: Props) => (
               <DatoImage data={project.cover.responsiveImage} />
             </div>
 
-            <div className='flex flex-col justify-between gap-4'>
+            <div className='flex flex-1 flex-col justify-between gap-4'>
               <div className='space-y-1 sm:space-y-4'>
                 <h4 className='text-lg md:text-2xl'>{project.title}</h4>
 
