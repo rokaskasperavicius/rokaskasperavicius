@@ -15,7 +15,7 @@ export const Gallery = ({ images }: Props) => (
     {images.map((image) => (
       <PhotoView key={image.id} src={image.responsiveImage?.src}>
         <div>
-          <DatoImage data={image.responsiveImage} />
+          <DatoImage data={image.responsiveImage} className='cursor-pointer' />
         </div>
       </PhotoView>
     ))}
