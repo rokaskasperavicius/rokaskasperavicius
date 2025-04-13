@@ -1,6 +1,7 @@
 'use client'
 
 import * as Dialog from '@radix-ui/react-dialog'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -34,6 +35,10 @@ export const Navigation = ({ open, setOpen }: Props) => {
         onOpenChange={setOpen}
       >
         <Dialog.Portal container={container}>
+          <VisuallyHidden.Root asChild>
+            <Dialog.Title>Navigation</Dialog.Title>
+          </VisuallyHidden.Root>
+
           <Dialog.Content className='DialogContent nav-border flex h-full w-16 justify-center py-12 focus-visible:!outline-none'>
             <Dialog.Description className='flex flex-col gap-4 self-end'>
               <Item

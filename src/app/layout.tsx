@@ -1,6 +1,7 @@
 import { AppLayout } from '@/components/layout/app-layout'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
+import 'react-photo-view/dist/react-photo-view.css'
 
 import '../foundation/styles/globals.css'
 import './globals.css'

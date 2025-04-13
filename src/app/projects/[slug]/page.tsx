@@ -1,8 +1,9 @@
-import { DatoImage } from '@/components'
 import { StructuredText } from '@/datocms/components/structured-text'
 
 import { request } from '@/foundation/datocms'
 import { ProjectDocument, ProjectsDocument } from '@/foundation/datocms/types'
+
+import { Gallery } from '../_content/gallery'
 
 export async function generateStaticParams() {
   const projects = await request(ProjectsDocument)
@@ -57,9 +58,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </div>
 
       <div className='space-y-4'>
-        {project.images.map((image, index) => (
-          <DatoImage key={index} data={image.responsiveImage} />
-        ))}
+        <Gallery images={project.images} />
       </div>
     </div>
   )
