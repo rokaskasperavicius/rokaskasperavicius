@@ -11,7 +11,7 @@ type Props = {
 }
 
 export const Gallery = ({ images }: Props) => (
-  <PhotoProvider>
+  <PhotoProvider loop={1} speed={() => 200}>
     {images.map((image) => (
       <PhotoView key={image.id} src={image.responsiveImage?.src}>
         <div>
