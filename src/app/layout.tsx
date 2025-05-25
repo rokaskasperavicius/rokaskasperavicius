@@ -1,5 +1,5 @@
 import { AppLayout } from '@/components/layout/app-layout'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { LoadSymbolsFont } from '@/components/shared/load-symbols-font'
 import type { Metadata } from 'next'
 import 'react-photo-view/dist/react-photo-view.css'
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <SpeedInsights />
+      <LoadSymbolsFont />
 
       <body>
         <AppLayout>{children}</AppLayout>
