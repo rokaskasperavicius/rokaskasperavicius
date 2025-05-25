@@ -1,3 +1,19 @@
+fragment RecordFragment on RecordInterface {
+  _createdAt
+  _firstPublishedAt
+  _isValid
+  _modelApiKey
+  _publishedAt
+  _seoMetaTags {
+    attributes
+    content
+    tag
+  }
+  _status
+  _updatedAt
+  id
+}
+
 fragment ResponsiveImageFragment on ResponsiveImage {
   srcSet
   webpSrcSet
@@ -39,31 +55,16 @@ fragment FileFieldFragment on FileField {
 }
 
 fragment TechnologiesRecordFragment on TechnologyRecord {
-  _createdAt
-  _isValid
-  _modelApiKey
-  _status
-  _updatedAt
+  ...RecordFragment
   createdAt
-  id
   title
   updatedAt
-  _seoMetaTags {
-    attributes
-    content
-    tag
-  }
 }
 
 fragment ExperienceRecordFragment on ExperienceRecord {
-  _createdAt
-  _isValid
-  _modelApiKey
-  _status
-  _updatedAt
+  ...RecordFragment
   createdAt
   date
-  id
   updatedAt
   description {
     blocks
@@ -77,22 +78,12 @@ fragment ExperienceRecordFragment on ExperienceRecord {
     value
     links
   }
-  _seoMetaTags {
-    attributes
-    content
-    tag
-  }
 }
 
 fragment ProjectRecordFragment on ProjectRecord {
-  _createdAt
-  _isValid
-  _modelApiKey
-  _status
-  _updatedAt
+  ...RecordFragment
   updatedAt
   createdAt
-  id
   slug
   title
   description {
@@ -123,10 +114,5 @@ fragment ProjectRecordFragment on ProjectRecord {
     ) {
       ...ResponsiveImageFragment
     }
-  }
-  _seoMetaTags {
-    attributes
-    content
-    tag
   }
 }
