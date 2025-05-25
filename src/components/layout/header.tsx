@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { useEffect, useState } from 'react'
 
+import { HeaderExternalLink } from '../shared/header-external-link'
 import { HeaderMenu } from '../shared/header-menu'
 import { Navigation } from './navigation'
 
@@ -118,37 +119,17 @@ export const Header = ({ resumeUrl }: Props) => {
           </div>
 
           <div className='flex items-end gap-2 font-bold'>
-            <motion.a
-              whileHover={{
-                scale: 1.05,
-              }}
-              target='_blank'
-              href={LINKEDIN_URL}
-              className='text-linkedin'
-            >
+            <HeaderExternalLink href={LINKEDIN_URL} className='text-linkedin'>
               LinkedIn
-            </motion.a>
+            </HeaderExternalLink>
 
-            <motion.a
-              whileHover={{
-                scale: 1.05,
-              }}
-              target='_blank'
-              href={GITHUB_URL}
-            >
-              GitHub
-            </motion.a>
+            <HeaderExternalLink href={GITHUB_URL}>GitHub</HeaderExternalLink>
 
-            <motion.a
-              whileHover={{
-                scale: 1.05,
-              }}
-              target='_blank'
-              className='text-primary'
-              href={resumeUrl}
-            >
-              Resume
-            </motion.a>
+            {resumeUrl && (
+              <HeaderExternalLink href={resumeUrl} className='text-primary'>
+                Resume
+              </HeaderExternalLink>
+            )}
           </div>
         </div>
       </div>
