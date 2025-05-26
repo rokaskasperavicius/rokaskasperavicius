@@ -20,6 +20,16 @@ export default function RootLayout({
     <html lang='en'>
       <LoadSymbolsFont />
 
+      <head>
+        <link
+          rel='preload'
+          href='/MaterialSymbolsOutlined.ttf'
+          as='font'
+          type='font/ttf'
+          crossOrigin='anonymous'
+        />
+      </head>
+
       <body>
         <AppLayout>{children}</AppLayout>
       </body>
