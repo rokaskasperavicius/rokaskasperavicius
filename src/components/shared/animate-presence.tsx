@@ -14,13 +14,13 @@ type Props = {
 
 const INITIAL_POSITIONS = {
   left: {
-    x: -100,
+    x: -20,
   },
   right: {
-    x: 100,
+    x: 20,
   },
   bottom: {
-    y: 100,
+    y: 20,
   },
 }
 
@@ -28,10 +28,11 @@ export const AnimatePresence = ({
   children,
   position,
   className = '',
-  threshold = 0.2,
+  threshold = 0.1,
   delay = 0,
 }: Props) => {
   const [ref, inView, _] = useInView({ threshold, triggerOnce: true })
+
   const control = useAnimation()
 
   useEffect(() => {

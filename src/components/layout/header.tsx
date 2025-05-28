@@ -126,7 +126,7 @@ export const Header = ({ resumeUrl }: Props) => {
             <HeaderExternalLink href={GITHUB_URL}>GitHub</HeaderExternalLink>
 
             {resumeUrl && (
-              <HeaderExternalLink href={resumeUrl} className='text-primary'>
+              <HeaderExternalLink href={resumeUrl} className='text-primary-100'>
                 Resume
               </HeaderExternalLink>
             )}

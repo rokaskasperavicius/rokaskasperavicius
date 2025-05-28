@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#937666', // #ff5208 #432444 #B1A482
-        accent: '#EFECE6',
+        primary: {
+          100: '#937666',
+          600: '#EFECE6',
+          700: '#F9F7F5',
+        }, // #ff5208 #432444 #B1A482
         black: '#242424',
-        white: '#fffdfc',
+        white: '#FFFDFC',
         linkedin: '#0B66C2',
       },
       animation: {

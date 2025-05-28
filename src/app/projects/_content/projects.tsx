@@ -22,7 +22,7 @@ export const Projects = ({ projects }: Props) => (
     {projects.allProjects.map((project) => (
       <Carousel.Slide autoWidth key={project.slug}>
         <Link href={`/projects/${project.slug}`} className='group'>
-          <div className='flex flex-col gap-4 rounded-md border-2 border-solid border-accent p-4 sm:flex-row'>
+          <div className='flex flex-col gap-4 rounded-md border-2 border-solid border-primary-600 p-4 sm:flex-row'>
             <div className='flex-shrink-0 sm:w-2/3'>
               <DatoImage data={project.cover.responsiveImage} />
             </div>

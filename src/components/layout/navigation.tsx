@@ -74,9 +74,9 @@ const Item = ({ href, title, isActive, onClick }: ItemProps) => (
     onClick={onClick}
     href={href}
     className={clsx(
-      'cursor-pointer rounded-sm py-2 text-xl transition-colors [text-orientation:upright] [writing-mode:vertical-lr] hover:bg-accent hover:text-black lg:text-2xl',
+      'cursor-pointer rounded-sm py-2 text-xl transition-colors [text-orientation:upright] [writing-mode:vertical-lr] hover:bg-primary-600 hover:text-black lg:text-2xl',
       {
-        'bg-accent text-black': isActive,
+        'bg-primary-600 text-black': isActive,
       },
     )}
   >

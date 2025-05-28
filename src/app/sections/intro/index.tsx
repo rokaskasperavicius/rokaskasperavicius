@@ -34,9 +34,10 @@ export const Intro = ({ featuredProject }: IntroProps) => (
         </div>
       </div>
 
-      <div className='text-primary'>software developer</div>
+      <div className='text-primary-100'>software developer</div>
       <div>
-        with <span className='text-primary'>5+ years </span> of work experience.
+        with <span className='text-primary-100'>5+ years </span> of work
+        experience.
       </div>
     </h1>
 
@@ -46,7 +47,7 @@ export const Intro = ({ featuredProject }: IntroProps) => (
         <Link href={`/projects/${featuredProject.slug}`}>
           <h3 className='text-xl md:text-2xl'>Featured Project 🚀</h3>
 
-          <div className='flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid border-accent p-4'>
+          <div className='flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid border-primary-600 p-4'>
             <DatoImage data={featuredProject.cover.responsiveImage} />
 
             <div className='flex flex-col justify-between gap-4'>

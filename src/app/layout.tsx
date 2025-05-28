@@ -1,5 +1,4 @@
 import { AppLayout } from '@/components/layout/app-layout'
-import { LoadSymbolsFont } from '@/components/shared/load-symbols-font'
 import type { Metadata } from 'next'
 import 'react-photo-view/dist/react-photo-view.css'
 
@@ -18,16 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <LoadSymbolsFont />
-
       <head>
+        {/* eslint-disable-next-line @next/next/no-page-custom-font, @next/next/google-font-display */}
         <link
-          rel='preload'
-          href='/MaterialSymbolsOutlined.ttf'
-          as='font'
-          type='font/ttf'
-          crossOrigin='anonymous'
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=open_in_new,work&display=block'
         />
+
+        <link rel='preconnect' href='https://webhooks.cloudpeak.dev' />
+        <link rel='preconnect' href='https://www.datocms-assets.com' />
       </head>
 
       <body>
