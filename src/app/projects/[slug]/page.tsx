@@ -14,7 +14,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { project } = await request(ProjectDocument, { slug: params.slug })
+  const { project } = await request(ProjectDocument, {
+    variables: { slug: params.slug },
+  })
 
   if (!project) {
     return null

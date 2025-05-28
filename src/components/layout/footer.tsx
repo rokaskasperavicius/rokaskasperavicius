@@ -9,7 +9,7 @@ export const Footer = () => {
     const handle = async () => {
       try {
         const data = await fetch('https://webhooks.cloudpeak.dev/api/meta', {
-          next: { revalidate: 0 },
+          cache: 'no-store',
         })
         const result = await data.json()
 

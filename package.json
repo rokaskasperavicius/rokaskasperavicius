@@ -10,12 +10,15 @@
     "lint": "next lint",
     "predev": "npm run codegen",
     "prebuild": "npm run codegen",
-    "codegen": "graphql-codegen -r dotenv/config --config ./src/foundation/datocms/codegen.yml"
+    "codegen": "graphql-codegen -r dotenv/config --config ./src/foundation/datocms/codegen.yml",
+    "tsc": "tsc --noEmit",
+    "ci": "npm run lint && npm run tsc"
   },
   "engines": {
     "node": "20.11.1"
   },
   "dependencies": {
+    "@datocms/cda-client": "^0.2.7",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-visually-hidden": "^1.1.3",
     "clsx": "^2.0.0",
@@ -23,7 +26,6 @@
     "embla-carousel-wheel-gestures": "^8.0.1",
     "framer-motion": "^10.16.12",
     "graphql": "^16.8.1",
-    "graphql-request": "^6.1.0",
     "lottie-react": "^2.4.0",
     "next": "14.0.0",
     "prettier": "^3.1.0",
@@ -40,7 +42,6 @@
     "@graphql-codegen/typed-document-node": "^5.0.1",
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-operations": "^4.0.1",
-    "@graphql-typed-document-node/core": "^3.2.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^20",
     "@types/react": "^18",
