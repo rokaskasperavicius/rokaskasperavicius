@@ -21,7 +21,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Gets populated through Dokku environment variables
-ARG NEXT_DATOCMS_API_TOKEN=DOKKU_PLACEHOLDER
+ARG NEXT_DATOCMS_API_TOKEN
 
 RUN npm run build
 
