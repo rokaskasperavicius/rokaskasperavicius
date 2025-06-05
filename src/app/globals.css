@@ -42,6 +42,10 @@
   background-color: theme(colors.primary.600);
 }
 
+.macarooni {
+  display: flex;
+}
+
 .right-arrow::after {
   position: absolute;
   content: '';
