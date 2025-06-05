@@ -43,7 +43,7 @@ export const Intro = ({ featuredProject }: IntroProps) => (
 
     <div className='flex justify-end'>
       {/* Featured */}
-      <motion.section whileHover='hover' className='group sm:max-w-96'>
+      {/* <motion.section whileHover='hover' className='group sm:max-w-96'>
         <Link href={`/projects/${featuredProject.slug}`}>
           <h3 className='text-xl md:text-2xl'>Featured Project 🚀</h3>
 
@@ -61,7 +61,7 @@ export const Intro = ({ featuredProject }: IntroProps) => (
             </div>
           </div>
         </Link>
-      </motion.section>
+      </motion.section> */}
     </div>
   </div>
 )
