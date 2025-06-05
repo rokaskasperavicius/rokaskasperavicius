@@ -25,9 +25,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN --mount=type=secret,id=datocms \
   NEXT_DATOCMS_API_TOKEN=/run/secrets/datocms \
-  echo $SECRET_KEY
-
-RUN npm run build
+  npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
