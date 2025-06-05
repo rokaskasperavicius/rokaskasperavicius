@@ -20,10 +20,13 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# set the argument default
+ARG NEXT_DATOCMS_API_TOKEN=POPULATE_ME
+
 # assign it to an environment variable
 # we can wrap the variable in brackets
 RUN echo $NEXT_DATOCMS_API_TOKEN
-ENV NEXT_DATOCMS_API_TOKEN=${NEXT_DATOCMS_API_TOKEN}
+# ENV NEXT_DATOCMS_API_TOKEN=${NEXT_DATOCMS_API_TOKEN}
 
 RUN npm run build
 
