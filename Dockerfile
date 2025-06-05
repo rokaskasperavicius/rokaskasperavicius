@@ -24,7 +24,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # ARG NEXT_DATOCMS_API_TOKEN
 
 RUN --mount=type=secret,id=datocms \
-  NEXT_DATOCMS_API_TOKEN=/run/secrets/datocms \
+  export NEXT_DATOCMS_API_TOKEN="$(cat /run/secrets/datocms)" && \
   npm run build
 
 # Production image, copy all the files and run next
