@@ -20,9 +20,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Gets populated through Dokku environment variables
-# ARG NEXT_DATOCMS_API_TOKEN
-
+# Gets populated through secret mounting
 RUN --mount=type=secret,id=datocms \
   export NEXT_DATOCMS_API_TOKEN="$(cat /run/secrets/datocms)" && \
   npm run build
