@@ -21,7 +21,11 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Gets populated through Dokku environment variables
-ARG NEXT_DATOCMS_API_TOKEN
+# ARG NEXT_DATOCMS_API_TOKEN
+
+RUN --mount=type=secret,id=datocms \
+  NEXT_DATOCMS_API_TOKEN=/run/secrets/datocms \
+  echo $SECRET_KEY
 
 RUN npm run build
 
