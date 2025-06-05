@@ -28,7 +28,7 @@ export const Footer = () => {
 
   return (
     <footer className='mt-10 flex flex-row justify-between border-t-2 border-solid border-primary-600 p-4 md:p-6 md:text-xl'>
-      <div>Rokas Kasperavicius</div>
+      <div>Rokas Kasperavicius :)</div>
 
       {date && <div>Last updated: {date}</div>}
     </footer>
