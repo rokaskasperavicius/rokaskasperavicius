@@ -22,7 +22,9 @@ export const ExperienceContent = ({ heading, experiences }: Props) => {
           <div key={id} className='flex gap-2 sm:gap-4'>
             <div className='mt-1 sm:-mt-px'>
               <div className='flex h-5 w-5 items-center justify-center rounded-full bg-primary-600 text-xs ring-4 ring-primary-700 sm:h-7 sm:w-7 sm:text-lg sm:ring-8'>
-                <span className='material-symbols-outlined'>work</span>
+                <span className='material-symbols-outlined notranslate'>
+                  work
+                </span>
               </div>
             </div>
 

@@ -20,7 +20,9 @@ export const HeaderExternalLink = ({ href, children, className }: Props) => {
       <div>{children}</div>
 
       <div className='relative text-xs md:bottom-1 md:text-base'>
-        <span className='material-symbols-outlined'>open_in_new</span>
+        <span className='material-symbols-outlined notranslate'>
+          open_in_new
+        </span>
       </div>
     </motion.a>
   )
