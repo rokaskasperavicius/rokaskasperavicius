@@ -8,13 +8,16 @@ export const Footer = () => {
   useEffect(() => {
     const handle = async () => {
       try {
-        const data = await fetch('https://webhooks.cloudpeak.dev/api/meta', {
-          cache: 'no-store',
-        })
+        const data = await fetch(
+          'https://api.github.com/repos/rokaskasperavicius/rokaskasperavicius/commits/main',
+          {
+            cache: 'no-store',
+          },
+        )
         const result = await data.json()
 
         setDate(
-          new Date(result.date).toLocaleDateString(undefined, {
+          new Date(result.commit.author.date).toLocaleDateString(undefined, {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
