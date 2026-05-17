@@ -21,6 +21,7 @@ export default async function Home() {
     technologies,
     experiences,
     experiencesHeading,
+    receivingEmail,
   } = pageData.homePage
 
   return (
@@ -44,7 +45,7 @@ export default async function Home() {
       />
 
       {/* outro section */}
-      <OutroContent />
+      <OutroContent receivingEmail={receivingEmail} />
     </div>
   )
 }

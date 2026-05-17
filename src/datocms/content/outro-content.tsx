@@ -1,7 +1,11 @@
 import { AnimatePresence } from '@/components/shared/animate-presence'
 import Link from 'next/link'
 
-export const OutroContent = () => {
+type Props = {
+  receivingEmail: string
+}
+
+export const OutroContent = ({ receivingEmail }: Props) => {
   return (
     <div className='overflow-hidden p-4 md:p-10'>
       <h2 className='text-center text-xl sm:text-3xl'>What&apos;s Next?</h2>
@@ -34,7 +38,7 @@ export const OutroContent = () => {
               </p>
               <div className='flex gap-3 sm:mt-3'>
                 <Link
-                  href='mailto:hello@rokaskasperavicius.dev'
+                  href={`mailto:${receivingEmail}`}
                   className='underline'
                   passHref
                 >
