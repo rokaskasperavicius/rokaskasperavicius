@@ -12,7 +12,8 @@
     "prebuild": "npm run codegen",
     "codegen": "graphql-codegen -r dotenv/config --config ./src/foundation/datocms/codegen.yml",
     "tsc": "tsc --noEmit",
-    "ci": "npm run lint && npm run tsc"
+    "eslint": "eslint . --max-warnings=0",
+    "ci": "npm run lint && npm run eslint && npm run tsc"
   },
   "engines": {
     "node": "24.1.0"

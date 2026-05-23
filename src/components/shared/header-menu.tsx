@@ -11,7 +11,7 @@ export const HeaderMenu = ({ onClick }: Props) => (
   >
     <HeaderMenuItem className='w-6' />
     <HeaderMenuItem className='w-8' />
-    <HeaderMenuItem className='w-5 ' />
+    <HeaderMenuItem className='w-5' />
   </div>
 )
 
