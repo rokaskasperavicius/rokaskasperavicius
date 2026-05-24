@@ -12,7 +12,7 @@ export const AppLayout = async ({ children }: AppLayoutProps) => {
   const data = await request(ResumeDocument)
 
   return (
-    <div className='m-auto mt-1 max-w-screen-2xl md:mt-10 2xl:mt-40'>
+    <div className='m-auto mt-1 max-w-(--breakpoint-2xl) md:mt-10 2xl:mt-40'>
       <div className='md:ml-16'>
         <Header resumeUrl={data.resume?.pdf.url} />
 

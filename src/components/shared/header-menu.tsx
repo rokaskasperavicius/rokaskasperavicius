@@ -16,5 +16,5 @@ export const HeaderMenu = ({ onClick }: Props) => (
 )
 
 const HeaderMenuItem = ({ className }: { className: string }) => (
-  <div className={clsx('h-0.5 rounded-xl bg-primary-100', className)} />
+  <div className={clsx('bg-primary-100 h-0.5 rounded-xl', className)} />
 )

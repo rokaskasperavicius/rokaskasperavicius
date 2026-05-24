@@ -22,12 +22,12 @@ export const Intro = ({ featuredProject }: IntroProps) => (
           <div>My name is Rokas,</div>
 
           <div className='relative h-8'>
-            <div className='word absolute left-0 top-0'>motivated</div>
-            <div className='word1 absolute left-0 top-0'>productive</div>
-            <div className='word2 absolute left-0 top-0'>experienced</div>
-            <div className='word3 absolute left-0 top-0'>confident</div>
-            <div className='word4 absolute left-0 top-0'>consistent</div>
-            <div className='word5 absolute left-0 top-0 whitespace-nowrap'>
+            <div className='word absolute top-0 left-0'>motivated</div>
+            <div className='word1 absolute top-0 left-0'>productive</div>
+            <div className='word2 absolute top-0 left-0'>experienced</div>
+            <div className='word3 absolute top-0 left-0'>confident</div>
+            <div className='word4 absolute top-0 left-0'>consistent</div>
+            <div className='word5 absolute top-0 left-0 whitespace-nowrap'>
               open-minded
             </div>
           </div>
@@ -47,7 +47,7 @@ export const Intro = ({ featuredProject }: IntroProps) => (
         <Link href={`/projects/${featuredProject.slug}`}>
           <h3 className='text-xl md:text-2xl'>Featured Project 🚀</h3>
 
-          <div className='flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid border-primary-600 p-4'>
+          <div className='border-primary-600 flex cursor-pointer flex-col gap-4 rounded-md border-2 border-solid p-4'>
             <DatoImage data={featuredProject.cover.responsiveImage} />
 
             <div className='flex flex-col justify-between gap-4'>

@@ -84,7 +84,7 @@ export const Header = ({ resumeUrl }: Props) => {
           <div className='relative hidden md:block'>
             <div
               className={clsx(
-                'absolute -left-24 top-0 font-pangolin transition-opacity',
+                'font-pangolin absolute top-0 -left-24 transition-opacity',
                 {
                   'opacity-0': !showSvg,
                 },

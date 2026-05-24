@@ -42,13 +42,13 @@ export const Carousel = ({
               <div
                 key={index}
                 className={clsx('cursor-pointer opacity-50', {
-                  '!opacity-100': index === activeIndex,
+                  'opacity-100!': index === activeIndex,
                 })}
                 onClick={() => emblaApi?.scrollTo(index)}
               >
                 <DatoImage
                   data={thumbnail}
-                  className='h-10 !w-10'
+                  className='h-10 w-10!'
                   pictureClassName='object-cover object-left'
                 />
               </div>
@@ -76,9 +76,9 @@ type SlideProps = {
 
 const Slide = ({ autoWidth, children }: SlideProps) => (
   <div
-    className={clsx('embla__slide mr-2 min-w-0 max-w-full', {
-      'flex-shrink-0 flex-grow basis-auto': autoWidth,
-      'flex-shrink-0 flex-grow basis-full': !autoWidth,
+    className={clsx('embla__slide mr-2 max-w-full min-w-0', {
+      'shrink-0 grow basis-auto': autoWidth,
+      'shrink-0 grow basis-full': !autoWidth,
     })}
   >
     {children}

@@ -24,7 +24,7 @@ export const Navigation = ({ open, setOpen }: Props) => {
   return (
     <>
       <nav
-        className='fixed top-0 z-50 h-full bg-white focus-visible:!outline-none md:-translate-x-16'
+        className='fixed top-0 z-50 h-full bg-white focus-visible:outline-hidden! md:-translate-x-16'
         ref={(ref) => {
           setContainer(ref)
         }}
@@ -40,7 +40,7 @@ export const Navigation = ({ open, setOpen }: Props) => {
             <Dialog.Title>Navigation</Dialog.Title>
           </VisuallyHidden.Root>
 
-          <Dialog.Content className='DialogContent nav-border flex h-full w-16 justify-center py-12 focus-visible:!outline-none'>
+          <Dialog.Content className='DialogContent nav-border flex h-full w-16 justify-center py-12 focus-visible:outline-hidden!'>
             <Dialog.Description className='flex flex-col gap-4 self-end'>
               <Item
                 onClick={() => setOpen(false)}
@@ -75,7 +75,7 @@ const Item = ({ href, title, isActive, onClick }: ItemProps) => (
     onClick={onClick}
     href={href}
     className={clsx(
-      'cursor-pointer rounded-sm py-2 text-xl transition-colors [text-orientation:upright] [writing-mode:vertical-lr] hover:bg-primary-600 hover:text-black lg:text-2xl',
+      'hover:bg-primary-600 cursor-pointer rounded-xs px-2 text-xl transition-colors [text-orientation:upright] [writing-mode:vertical-lr] hover:text-black lg:text-2xl',
       {
         'bg-primary-600 text-black': isActive,
       },

@@ -16,7 +16,7 @@ export const DatoImage = ({
 
   return (
     <DatoImageNative
-      className={clsx('rounded-sm', className)}
+      className={clsx('rounded-xs', className)}
       pictureClassName={pictureClassName}
       data={data}
     />
