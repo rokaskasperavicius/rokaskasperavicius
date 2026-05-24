@@ -3,18 +3,18 @@
 import clsx from 'clsx'
 import useEmblaCarousel from 'embla-carousel-react'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import { useCallback, useEffect, useState } from 'react'
+import { ReactNode, useCallback, useEffect, useState } from 'react'
 
-import { ResponsiveImage } from '@/foundation/datocms/types'
+import { ResponsiveImageFragment } from '@/foundation/datocms/types'
 
 import { DatoImage } from '../DatoImage'
 
 type Props = {
   loop: boolean
-  children: React.ReactNode
+  children: ReactNode
   className?: string
   showNavigation?: boolean
-  thumbnails?: Array<ResponsiveImage | null | undefined>
+  thumbnails?: Array<ResponsiveImageFragment | null | undefined>
 }
 
 export const Carousel = ({
@@ -84,7 +84,7 @@ export const Carousel = ({
 
 type SlideProps = {
   autoWidth: boolean
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const Slide = ({ autoWidth, children }: SlideProps) => (

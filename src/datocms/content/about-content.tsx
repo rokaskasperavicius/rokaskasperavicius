@@ -7,19 +7,19 @@ import { Carousel } from '@/components/shared/carousel'
 import 'react-multi-carousel/lib/styles.css'
 
 import {
-  HomePageRecord,
-  ResponsiveImage,
-  TechnologyRecord,
+  HomePageQuery,
+  ResponsiveImageFragment,
+  TechnologiesRecordFragment,
 } from '@/foundation/datocms/types'
 
 import { StructuredText } from '../components/structured-text'
 
 type Props = {
   heading: string
-  image: ResponsiveImage | null | undefined
-  description: HomePageRecord['aboutDescription']
+  image: ResponsiveImageFragment | null
+  description: NonNullable<HomePageQuery['homePage']>['aboutDescription']
   technologiesHeading: string
-  technologies: TechnologyRecord[]
+  technologies: TechnologiesRecordFragment[]
 }
 
 export const AboutContent = ({

@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { isStructuredText } from 'datocms-structured-text-utils'
+import { isCdaStructuredTextValue } from 'datocms-structured-text-utils'
 import { StructuredText as StructuredTextNative } from 'react-datocms'
 
 type Props = {
@@ -8,9 +8,9 @@ type Props = {
 }
 
 export const StructuredText = ({ content, className }: Props) => {
-  // DatoCMS is not fixing their types
+  // DatoCMS is not fixing their types,
   // and I am not writing a 50 line AST parser to fix the types :)
-  if (!isStructuredText(content)) {
+  if (!isCdaStructuredTextValue(content)) {
     throw new Error('Provided content is not in structured text format')
   }
 

@@ -4,10 +4,10 @@ import { DatoImage } from '@/components'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import { ProjectRecord, ResponsiveImage } from '@/foundation/datocms/types'
+import { ProjectRecordFragment } from '@/foundation/datocms/types'
 
 type IntroProps = {
-  featuredProject: ProjectRecord
+  featuredProject: ProjectRecordFragment
 }
 
 export const Intro = ({ featuredProject }: IntroProps) => (

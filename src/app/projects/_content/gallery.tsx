@@ -4,10 +4,10 @@ import { DatoImage } from '@/components'
 import React from 'react'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 
-import { FileField } from '@/foundation/datocms/types'
+import { FileFieldFragment } from '@/foundation/datocms/types'
 
 type Props = {
-  images: FileField[]
+  images: FileFieldFragment[]
 }
 
 export const Gallery = ({ images }: Props) => (

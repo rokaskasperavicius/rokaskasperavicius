@@ -1,7 +1,7 @@
 query HomePage {
   homePage {
     featuredProject {
-      ...ProjectRecordFragment
+      ...ProjectRecord
     }
 
     aboutHeading
@@ -13,18 +13,18 @@ query HomePage {
     }
     aboutImage {
       responsiveImage(imgixParams: { fit: crop, w: 250, auto: format }) {
-        ...ResponsiveImageFragment
+        ...ResponsiveImage
       }
     }
 
     technologiesHeading
     technologies {
-      ...TechnologiesRecordFragment
+      ...TechnologiesRecord
     }
 
     experiencesHeading
     experiences {
-      ...ExperienceRecordFragment
+      ...ExperienceRecord
     }
     receivingEmail
   }

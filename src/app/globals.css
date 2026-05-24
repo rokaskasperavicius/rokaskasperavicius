@@ -42,10 +42,6 @@
   background-color: theme(colors.primary.600);
 }
 
-/* .macarooni {
-  display: flex;
-} */
-
 .right-arrow::after {
   position: absolute;
   content: '';
@@ -129,18 +125,6 @@
       margin-bottom: 1rem;
     }
   }
-}
-
-.mousey {
-  width: 3px;
-  padding: 2px 9px;
-  height: 35px;
-  border: 2px solid #d8d1c0;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-
-  animation: fadeIn 1s linear forwards;
 }
 
 @keyframes fadeIn {

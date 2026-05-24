@@ -1,11 +1,11 @@
 query Projects {
   allProjects {
-    ...ProjectRecordFragment
+    ...ProjectRecord
   }
 }
 
 query Project($slug: String!) {
   project(filter: { slug: { eq: $slug } }) {
-    ...ProjectRecordFragment
+    ...ProjectRecord
   }
 }

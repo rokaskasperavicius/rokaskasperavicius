@@ -1,12 +1,12 @@
 import { AnimatePresence } from '@/components/shared/animate-presence'
 
-import { ExperienceRecord } from '@/foundation/datocms/types'
+import { ExperienceRecordFragment } from '@/foundation/datocms/types'
 
 import { StructuredText } from '../components/structured-text'
 
 type Props = {
   heading: string
-  experiences: ExperienceRecord[]
+  experiences: ExperienceRecordFragment[]
 }
 
 export const ExperienceContent = ({ heading, experiences }: Props) => {

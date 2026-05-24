@@ -1,4 +1,4 @@
-fragment RecordFragment on RecordInterface {
+fragment Record on RecordInterface {
   _createdAt
   _firstPublishedAt
   _isValid
@@ -9,12 +9,11 @@ fragment RecordFragment on RecordInterface {
     content
     tag
   }
-  _status
   _updatedAt
   id
 }
 
-fragment ResponsiveImageFragment on ResponsiveImage {
+fragment ResponsiveImage on ResponsiveImage {
   srcSet
   webpSrcSet
   sizes
@@ -27,7 +26,7 @@ fragment ResponsiveImageFragment on ResponsiveImage {
   base64
 }
 
-fragment FileFieldFragment on FileField {
+fragment FileField on FileField {
   _createdAt
   _updatedAt
   basename
@@ -50,19 +49,22 @@ fragment FileFieldFragment on FileField {
   smartTags
   tags
   url
-
-  # We'll handle responsiveImage separately in the query
+  responsiveImage(
+    imgixParams: { fit: crop, w: 2560, h: 1440, auto: format }
+  ) {
+    ...ResponsiveImage
+  }
 }
 
-fragment TechnologiesRecordFragment on TechnologyRecord {
-  ...RecordFragment
+fragment TechnologiesRecord on TechnologyRecord {
+  ...Record
   createdAt
   title
   updatedAt
 }
 
-fragment ExperienceRecordFragment on ExperienceRecord {
-  ...RecordFragment
+fragment ExperienceRecord on ExperienceRecord {
+  ...Record
   createdAt
   date
   updatedAt
@@ -80,8 +82,8 @@ fragment ExperienceRecordFragment on ExperienceRecord {
   }
 }
 
-fragment ProjectRecordFragment on ProjectRecord {
-  ...RecordFragment
+fragment ProjectRecord on ProjectRecord {
+  ...Record
   updatedAt
   createdAt
   slug
@@ -95,24 +97,12 @@ fragment ProjectRecordFragment on ProjectRecord {
   githubPrimaryUrl
   githubSecondaryUrl
   technologies {
-    ...TechnologiesRecordFragment
+    ...TechnologiesRecord
   }
   cover {
-    ...FileFieldFragment
-
-    responsiveImage(
-      imgixParams: { fit: crop, w: 2560, h: 1440, auto: format }
-    ) {
-      ...ResponsiveImageFragment
-    }
+    ...FileField
   }
   images {
-    ...FileFieldFragment
-
-    responsiveImage(
-      imgixParams: { fit: crop, w: 2560, h: 1440, auto: format }
-    ) {
-      ...ResponsiveImageFragment
-    }
+    ...FileField
   }
 }
