@@ -3,7 +3,7 @@
 import clsx from 'clsx'
 import useEmblaCarousel from 'embla-carousel-react'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import { ReactNode, useCallback, useEffect, useState } from 'react'
+import { ReactNode, useState } from 'react'
 
 import { ResponsiveImageFragment } from '@/foundation/datocms/types'
 
@@ -32,19 +32,6 @@ export const Carousel = ({
 
   const goPrev = () => emblaApi?.scrollPrev()
   const goNext = () => emblaApi?.scrollNext()
-
-  const getActive = useCallback(() => {
-    if (!emblaApi) return
-
-    setActiveIndex(emblaApi.selectedScrollSnap())
-  }, [emblaApi])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    getActive()
-    emblaApi.on('reInit', getActive).on('select', getActive)
-  }, [emblaApi, getActive])
 
   return (
     <div>

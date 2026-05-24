@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    revalidateTag(cacheTag)
+    revalidateTag(cacheTag, 'max')
 
     return NextResponse.json(
       { message: 'Cache revalidated' },

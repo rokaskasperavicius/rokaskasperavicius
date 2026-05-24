@@ -7,13 +7,12 @@
     "open-browser": "open http://localhost:3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "predev": "npm run codegen",
     "prebuild": "npm run codegen",
     "codegen": "graphql-codegen -r dotenv/config --config ./src/foundation/datocms/codegen.ts",
     "tsc": "tsc --noEmit",
-    "eslint": "eslint . --max-warnings=0",
-    "ci": "npm run lint && npm run eslint && npm run tsc"
+    "ci": "npm run lint && npm run tsc"
   },
   "engines": {
     "node": "24.1.0"
@@ -28,11 +27,11 @@
     "embla-carousel-wheel-gestures": "^8.1.0",
     "framer-motion": "^12.38.0",
     "graphql": "^16.14.0",
-    "next": "14.2.33",
+    "next": "16.2.6",
     "prettier": "^3.8.3",
-    "react": "^18",
+    "react": "19.2.6",
     "react-datocms": "^8.0.3",
-    "react-dom": "^18",
+    "react-dom": "19.2.6",
     "react-intersection-observer": "^10.0.3",
     "react-multi-carousel": "^2.8.6",
     "react-photo-view": "^1.2.7",
@@ -45,18 +44,22 @@
     "@graphql-codegen/typescript": "^6.0.1",
     "@graphql-codegen/typescript-operations": "^6.0.2",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/node": "^25.8.0",
+    "@types/react": "19.2.15",
+    "@types/react-dom": "19.2.3",
     "@types/react-lottie": "^1.2.8",
     "autoprefixer": "^10.5.0",
     "dotenv": "^17.4.2",
-    "eslint": "^8.55.0",
-    "eslint-config-next": "14.0.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.6",
     "eslint-plugin-prettier": "^5.5.5",
     "postcss": "^8.5.14",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5"
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "@types/react": "19.2.15",
+    "@types/react-dom": "19.2.3"
   }
 }

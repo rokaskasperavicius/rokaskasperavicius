@@ -25,9 +25,10 @@ export const Navigation = ({ open, setOpen }: Props) => {
     <>
       <nav
         className='fixed top-0 z-50 h-full bg-white focus-visible:!outline-none md:-translate-x-16'
-        ref={(ref) => setContainer(ref)}
+        ref={(ref) => {
+          setContainer(ref)
+        }}
       />
-
       <Dialog.Root
         modal={false}
         open={isNavigationOpen}

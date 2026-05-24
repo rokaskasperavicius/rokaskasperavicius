@@ -13,7 +13,10 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props: {
+  params: Promise<{ slug: string }>
+}) {
+  const params = await props.params
   const { project } = await request(ProjectDocument, {
     variables: { slug: params.slug },
   })
